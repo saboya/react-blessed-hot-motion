@@ -1,7 +1,9 @@
 import React from 'react';
-import blessed from 'blessed';
-import { render } from 'react-blessed';
+import blessed from 'neo-blessed';
+import { createBlessedRenderer } from 'react-blessed';
 import App from './components/App';
+
+const render = createBlessedRenderer(blessed);
 
 // Create our screen
 const screen = blessed.screen({
